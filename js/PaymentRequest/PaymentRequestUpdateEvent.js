@@ -32,8 +32,6 @@ export default class PaymentRequestUpdateEvent {
   name: string;
   target: PaymentRequest;
   _waitForUpdate: boolean;
-  _handleDetailsChange: PaymentDetailsModifier => Promise<any>;
-  _resetEvent: any;
 
   constructor(name, target) {
     if (
