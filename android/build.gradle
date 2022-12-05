@@ -6,7 +6,7 @@ android {
 
     defaultConfig {
         minSdkVersion 21
-        targetSdkVersion 28
+        targetSdkVersion 31
         versionCode 1
         versionName "1.0"
         ndk {
@@ -24,4 +24,11 @@ dependencies {
     implementation 'com.google.android.gms:play-services-identity:17.0.0'
     implementation 'com.google.android.gms:play-services-wallet:17.0.0'
     implementation 'com.android.support:support-v4:23.0.1'
+}
+
+configurations.all {
+    resolutionStrategy {
+        force 'androidx.core:core-ktx:1.6.0'
+        force 'androidx.core:core:1.6.0'
+    }
 }
